@@ -21,5 +21,5 @@ session, token
   return session;
     },
   },
-  secret: process.env.JWT_SECRET,
+ secret: process.env.JWT_SECRET,
 });
