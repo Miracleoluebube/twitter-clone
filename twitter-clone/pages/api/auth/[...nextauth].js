@@ -10,6 +10,10 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET
     })
   ],
+  // jwt: {
+  //   encryption: true
+  // },
+  // secret: "secret token",
 
   callbacks: {
     async session({
@@ -21,5 +25,5 @@ session, token
   return session;
     },
   },
- secret: process.env.JWT_SECRET,
+ //secret: process.env.JWT_SECRET,
 });
