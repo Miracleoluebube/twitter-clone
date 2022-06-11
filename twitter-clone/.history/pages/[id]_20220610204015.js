@@ -18,7 +18,7 @@ import {
   import { ArrowLeftIcon } from "@heroicons/react/solid";
   import Comment from "../components/Comment";
   import Head from "next/head";
-  import Login from "../components/Login";
+  import Login from "..components/Lo"
   
   function PostPage({ trendingResults, followResults, providers }) {
     const { data: session } = useSession();

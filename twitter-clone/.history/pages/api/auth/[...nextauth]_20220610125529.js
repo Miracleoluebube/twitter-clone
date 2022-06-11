@@ -8,7 +8,7 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  
+      
     })
   ],
   // jwt: {
@@ -19,13 +19,12 @@ export default NextAuth({
   callbacks: {
     async session({
 session, token
-    }) 
-    {
+    }) {
       session.user.tag = session.user.name.split("").join("").toLocaleLowerCase();
   
   session.user.uid = token.sub;
   return session;
     },
   },
- secret: process.env.NEXTAUTH_SECRET,
+ //secret: process.env.JWT_SECRET,
 });
