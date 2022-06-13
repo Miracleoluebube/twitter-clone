@@ -11,10 +11,7 @@ export default NextAuth({
   
     })
   ],
-  // jwt: {
-  //   encryption: true
-  // },
-  // secret: "secret token",
+  
 
   callbacks: {
     async session({
